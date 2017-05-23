@@ -701,8 +701,7 @@ class ViewMethodsMixin(object):
             request_iface = attrs.get('request_iface', IRequest)
 
             try:
-                if request is not self:
-                    manager.push({'request': request, 'registry': registry})
+                manager.push({'request': request, 'registry': registry})
 
                 response = _call_view(
                     registry,
